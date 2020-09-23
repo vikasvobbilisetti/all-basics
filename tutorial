@@ -1,0 +1,152 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    printf("Hello world!\n");
+    printf("%d\n",25);
+    printf("%d\n",257565647);
+    printf("257565647\n");
+    printf("%f\n",25.7565647);
+    printf("%3f\n",25.7565647);
+    char characterName[]= "supriya";// this square bracket must be kept only for strings
+    int  characterAge=60;
+
+    printf("my syster name is %s\n",characterName);// this is vairables for strings
+    printf("my sister age in %d\n",characterAge);  // this variable for integer
+    printf("the waste girl in the world is %s\n",characterName);
+
+
+
+    int sum_number; //
+
+    int n1,n2,n3;
+    sum_number=3;
+
+    int age=4;
+    int teeth=32;
+    n2=teeth=32+0;
+
+    n1=age+10;
+
+    printf("his age is %d\n",n1);
+    printf("he has %d teeth \n",n2);
+
+    // it is about local varables
+
+    int x,y,z;
+
+    x = 10;
+    y= x+5;
+    z= y+1;
+
+    printf("the value of z=%d\n",z);
+
+     //this time we learn how to  write in black screen by using scanf
+   //... in scanf the bracket divide into two parts first part is %d and second part is &a//
+
+   //once refer udemy video 7
+   int a;
+   printf("please enter any number %d",a);
+   scanf("%d",&a );  // "&" is used only for integers not char
+   printf("the answer is %d",a);
+
+   // now let us see incremint and decremint as a++ and a-- these two are postfix
+   //now ++a and --a are  are post fix let us see example how it works
+
+    int  a=5,  b=5;
+
+
+   printf("\n%d%d",a--,--b);
+   printf("\n%d%d",a--,--b);
+   printf("\n%d%d",a--,--b);
+   printf("\n%d%d",a--,--b);
+
+   int x=5,y=7;
+
+   int  z=x+y;
+
+   float  N=y/x;
+
+
+   printf("the result is %d\n",z);
+
+   printf("the result is %.2f\n",N);
+   int marks;
+   printf("enter your marks:");
+   scanf("%d",&marks);
+
+   if(marks>85)
+   {
+       printf("your grade is a");
+   }
+   else if((marks>=70) && (marks<=84))
+   {
+       printf("your grade is b");
+   }
+   else if(marks>=55 && marks<=69)
+   {
+       printf("your grade is c");
+   }
+   else if (marks >=40 && marks<=54)
+   {
+       printf("your grade is d");
+   }
+   else
+   {
+       printf("your grade is f");
+
+   }
+
+
+   printf("this is the menu: \n1.pizza\n2.burger\n3.pasta\n4.french fries\n5.sandwich\n");
+   int choice;
+   scanf("%d",&choice);
+   switch (choice)
+   {
+
+   case 1:
+    printf("you picked pizza the cost is 239.\n" );
+    break;
+   case 2:
+    printf("you picked burger the cost is 129.\n");
+    break;
+         case 3:
+          printf("you picked pasta the cost is 179.\n" );
+          break;
+          case 4:
+           printf("you picked french fries the cost is 99.\n" );
+           break;
+           case 5:
+            printf("you picked sandwich the cost is 149.\n" );
+            break;
+   }
+
+   int i,j;
+   for (i=0;i<=6;i++)
+   {
+     for (j=0;j<=i;j++) {
+
+        printf("01");
+     }
+     printf("\n");
+   }
+
+
+   int sum(int a,int b,int c,int d)
+   {
+   int s;
+   s=a+b+c+d;
+   return s;
+   }
+   int main()
+   {
+    int a=1;
+    int b=2;
+    int c=3;
+    int d=4;
+
+   int reminder;
+   reminder=sum(a,b,c,d);
+   printf("the final answer is %d",reminder);
+   }
