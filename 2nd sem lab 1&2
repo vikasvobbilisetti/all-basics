@@ -1,0 +1,516 @@
+1)	selection
+#include <stdio.h>
+ 
+void main()
+{
+    int num1, num2, num3;
+ 
+    printf("Enter the values of num1, num2 and num3\n");
+    scanf("%d %d %d", &num1, &num2, &num3);
+    printf("num1 = %d\tnum2 = %d\tnum3 = %d\n", num1, num2, num3);
+    if (num1 > num2)
+    {
+        if (num1 > num3)
+        {
+            printf("num1 is the greatest among three \n");
+        }
+        else
+        {
+            printf("num3 is the greatest among three \n");
+        }
+    }
+    else if (num2 > num3)
+        printf("num2 is the greatest among three \n");
+    else
+        printf("num3 is the greatest among three \n");
+}
+2)
+#include<stdio.h>
+int main()
+{
+	int n;
+	printf("Enter a number");
+	scanf("%d", &n);
+	if(n%3==0)
+	{
+		if(n%5==0)
+		{
+			printf("The number is divisibleby both 3 and 5");
+		}
+		else
+		{
+			printf("The number is divisible by 3");
+		}
+		
+	}
+	else if(n%5==0)
+	{
+		printf("The number is divisible by 5");
+	}
+	else
+	{
+		printf("The number is not divisible by 3 or 5");
+	}
+
+
+
+
+
+
+
+
+
+3)
+#include <stdio.h>
+ 
+int main()
+{
+	char Operator;
+	float num1, num2, result = 0;
+	
+	printf("\n Please Enter an Operator (+, -, *, /)  :  ");
+  	scanf("%c", &Operator);
+  	
+	printf("\n Please Enter the Values for two Operands: num1 and num2  :  ");
+  	scanf("%f%f", &num1, &num2);
+  	
+  	if(Operator == '+')
+  	{
+  		printf("\n The result of %.2f + %.2f  = %.2f", num1, num2, num1 + num2);
+  	}
+  	else if(Operator == '-')
+  	{
+  		printf("\n The result of %.2f - %.2f  = %.2f", num1, num2, num1 - num2);
+  	}
+  	else if(Operator == '*')
+  	{
+  		printf("\n The result of %.2f * %.2f  = %.2f", num1, num2, num1 * num2);
+  	}
+  	else if(Operator == '/')
+  	{
+  		printf("\n The result of %.2f / %.2f  = %.2f", num1, num2, num1 / num2);
+  	}
+  	else
+  	{
+  		printf("\n You have enetered an Invalid Operator ");
+	}
+	
+  	return 0;
+}
+looping
+1)
+#include<stdio.h>
+void main() {
+ int num,m,n;
+
+ printf ("Enter range (m, n ) : ") ;3)
+ scanf ("%d %d", &m, &n);
+ for (num = m; num <= n; num++) {
+   printf("%d ", num);
+ }
+ getch();
+}
+
+
+
+9)
+#include <stdio.h>
+int main()
+{
+    int n1, n2, i, gcd;
+
+    printf("Enter two integers: ");
+    scanf("%d %d", &n1, &n2);
+
+    for(i=1; i <= n1 && i <= n2; ++i)
+    {
+        
+        if(n1%i==0 && n2%i==0)
+            gcd = i;
+    }
+
+    printf("G.C.D of %d and %d is %d", n1, n2, gcd);
+
+    return 0;
+}
+
+3)
+#include <stdio.h>
+int main() {
+    int n, i ,fact = 1;
+    printf("Enter an integer: ");
+    scanf("%d", &n);
+
+    if (n < 0)
+        printf("Error! Factorial of a negative number doesn't exist.");
+    else {
+        for (i = 1; i <= n; ++i) {
+            fact *= i;
+        }
+        printf("Factorial of %d = %llu", n, fact);
+    }
+
+    return 0;
+}
+4)
+#include <stdio.h>
+int main() 
+{
+    int n, i;
+    printf("Enter an integer: ");
+    scanf("%d", &n);
+    for (i = 1; i <= 10; ++i) 
+	{
+        printf("%d * %d = %d \n", n, i, n * i);
+    }
+    return 0;
+}
+
+5)
+ #include <stdio.h>
+int main() {
+    int n;
+    int count = 0;
+    printf("Enter an integer: ");
+    scanf("%d", &n);
+ 
+    while (n != 0) {
+        n /= 10;     
+        ++count;
+    }
+
+    printf("Number of digits: %d", count);
+}
+
+Perfect number:
+#include<stdio.h>   
+int main()  
+{  
+int num, rem, sum = 0, i;    
+printf("Enter a number\n");  
+scanf("%d", &num);  
+for(i = 1; i < num; i++)  
+    {  
+      rem = num % i;  
+      if (rem == 0)  
+        {  
+          sum = sum + i;  
+        }  
+    }  
+if (sum == num)  
+    {
+    printf("%d is a Perfect Number",num); 
+    }   
+else  
+{
+    printf("\n %d is not a Perfect Number", num);  
+}
+
+7)palindrome
+#include <stdio.h>
+int main() 
+{
+    int n, rev = 0, rem, ori;
+    printf("Enter an integer: ");
+    scanf("%d", &n);
+    ori = n;
+    while (n != 0) 
+	{
+        rem1 = n % 10;
+        rev = rev * 10 + rem;
+        n /= 10;
+    }
+    if (ori == rev)
+    {
+     printf("%d is a palindrome.", ori);	
+	}
+    else
+    {
+     printf("%d is not a palindrome.", ori);	
+	}
+
+    return 0;
+}
+8)prime
+#include <stdio.h>
+int main() {
+  int n, i, flag = 0;
+  printf("Enter a positive integer: ");
+  scanf("%d", &n);
+
+  for (i = 2; i <= n / 2; ++i) 
+  {
+    if (n % i == 0) {
+      flag = 1;
+      break;
+    }
+  }
+
+  if (n == 1) {
+    printf("1 is neither prime nor composite.");
+  } 
+  else {
+    if (flag == 0)
+      printf("%d is a prime number.", n);
+    else
+      printf("%d is not a prime number.", n);
+  }
+
+  return 0;
+}
+
+3)factorial
+#include <stdio.h>
+int main() 
+{
+    int n, i;
+    unsigned long long fact = 1;
+    printf("Enter an integer: ");
+    scanf("%d", &n);
+    if (n < 0)
+    {
+      printf("Error! Factorial of a negative number doesn't exist.");
+	}
+
+    else 
+	{
+        for (i = 1; i <= n; ++i) 
+		{
+            fact *= i;
+        }
+        printf("Factorial of %d = %llu", n, fact);
+    }
+
+    return 0;
+}
+
+10) strong number
+#include<stdio.h>
+ 
+int main()
+ 
+{
+ 
+ int num,i,fact,r,sum=0,temp;
+ 
+ printf("Please enter a number to find strong number");
+ 
+ scanf("%d",&num);
+ 
+ temp=num;
+ 
+ while(num)
+ 
+ {
+ 
+     i=1,fact=1;
+ 
+     r=num%10;
+ 
+     while(i<=r)
+ 
+     {
+ 
+        fact=fact*i;
+ 
+        i++;
+ 
+     }
+ 
+     sum=sum+fact;
+ 
+     num=num/10;
+ 
+}
+ 
+ 
+ 
+ if(sum==temp)
+ 
+  printf("\nThe number %d is a strong number",temp);
+ 
+ else
+ 
+  printf("\nThe number %d is not a strong number",temp);
+ 
+ return 0;
+ 
+}
+
+
+
+
+Week sheet 2:
+1)Armstrong number
+#include <stdio.h>
+int main() {
+    int num, oNum, remainder, result = 0;
+    printf("Enter a three-digit integer: ");
+    scanf("%d", &num);
+    oNum = num;
+
+    while (oNum != 0) {
+      
+        remainder = oNum % 10;
+        
+       result += remainder * remainder * remainder;
+        
+      
+       oNum /= 10;
+    }
+
+    if (result == num)
+        printf("%d is an Armstrong number.", num);
+    else
+        printf("%d is not an Armstrong number.", num);
+
+    return 0;
+}
+
+2)	factorial in a given range.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i,j,n;
+    float sum,fact;
+    printf("enter a number: ");
+    scanf("%f",&n);
+    sum=0.0;
+            
+
+    for (i=1;i<=n;i++)
+    {
+         fact=1;
+
+      for (j=1;j<=i;j++)
+      {
+        fact=fact*j;
+      }
+
+      sum=sum+(i/fact);
+     
+    }
+  printf("%f",sum);
+
+    return 0;
+}
+7)prime numbers between a range
+#include <stdio.h>
+int main()
+{
+   int num1, num2, flag, i, j;
+ 
+   
+   printf("Enter two range(input integer numbers only):");
+  
+   scanf("%d %d", &num1, &num2);
+ 
+ 
+   printf("Prime numbers from %d and %d are:\n", num1, num2);
+   for(i=num1+1; i<num2; ++i)
+   {
+      flag=0;
+      for(j=2; j<=i/2; ++j)
+      {
+         if(i%j==0)
+         {
+            flag=1;
+            break;
+         }
+      }
+      if(flag==0)
+         printf("%d\n",i);
+  }
+  return 0;
+}
+4)fibonaccci series
+#include <stdio.h>
+int main() {
+    int a = 0, b = 1, nt = 0, n;
+    printf("Enter a positive number: ");
+    scanf("%d", &n);
+
+    printf("Fibonacci Series: %d, %d, ", a, b);
+      nt = a + b;
+
+    while (nt <= n) 
+    {
+        printf("%d, ", nt);
+        a = b;
+        b = nt;
+        nt = a + b;
+    }
+
+    return 0;
+}
+8)Multiplication table
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+   int n1,n2,i,pro,j;
+   scanf ("%d  %d",&n1,&n2);
+
+   for (j=n1;j<=n2;j++)
+   {
+
+   for (i=1;i<=10;i++)
+   {
+       pro=j*i;
+        printf("%d\n",pro);
+   }
+   }
+    return 0;
+}
+
+1.	6)   Print the product of all the numbers entered by the user, until the user enters any value divisible by 5.
+#include <stdio.h>
+
+int main()
+{
+    int pro,n;
+    pro=1;
+   
+    while(n != 5)
+    {
+        pro=pro*n;
+        printf("enter the numbers");
+        scanf("%d",&n);
+        
+    }
+    
+    printf("%d",pro);
+
+    return 0;
+}
+
+9)	Print the sum of the following series upto n terms 1/1! + 2/2! + ……. + n/n!.
+#include<stdio.h>
+int main()  
+{  
+    int num = 1, count, limit;  
+    float sum = 0.0, fact;  
+  
+    printf("Enter the number of terms\n");  
+    scanf("%d", &limit);  
+  
+    while(num <= limit)  
+    {  
+        fact = 1;  
+        for(count = 1; count <= num; count++)  
+        {  
+            fact = fact * count;  
+        }  
+  
+        sum = sum + (num / fact);  
+  
+        num++;  
+    }  
+  
+    printf("Sum of %d terms of series is %f\n", limit, sum);  
+  
+    return 0;  
+}
