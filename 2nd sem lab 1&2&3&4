@@ -914,3 +914,60 @@ int main()
 
     return 0;
 }
+
+
+
+
+
+/
+//
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+lab 4 some random questions
+
+
+
+largest and second largest number code
+
+#include <stdio.h>
+#include<limits.h>
+
+
+int main()
+{
+    int a[8]={1,2,3,4,5,7,6,9 };
+    int i,j;
+    int lar,slar;
+    lar=INT_MIN;
+    slar=INT_MIN;
+    for(i=0;i<=8;i++)
+    {
+        if(a[i]>lar)
+        {
+           slar=lar;
+           lar=a[i];
+           
+        }
+        else if(a[i]>slar && a[i]<lar)
+        {
+            slar=a[i];
+        }
+    }
+    printf("%d\n %d",lar,slar);
+    
+   
+    return 0;
+}
+
