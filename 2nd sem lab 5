@@ -1,0 +1,300 @@
+/////////////
+1st question
+
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("enter a number");
+    scanf("%d",&n);
+    eoo(n);
+   
+}
+  void eoo(int nu)
+  {
+      if(nu%2==0)
+      {
+          
+          printf("entered number is even");
+          
+          
+      }
+      
+      else
+      {
+           printf("entered number is odd");
+      }
+  }
+  
+  \\\\\\\\\\\\\
+  
+  2nd question
+  
+  #include <stdio.h>
+
+int main()
+{
+    int n,y;
+    printf("enter a number");
+    scanf("%d",&n);
+    y=sq(n);
+    printf("%d is the square",y);
+    
+    
+   
+}
+  int sq(int nu)
+  {
+      int x;
+      x=nu*nu;
+      return x;
+  }
+  \\\\\\\\\\
+  3rd question
+  
+  #include<stdio.h>
+int main()
+{
+    int a;
+printf("enter the number of the month\n");
+scanf("%d", &a);
+ month_of_year(a);
+return 0;
+}
+
+void month_of_year(int b)
+{
+  if(b==1)
+  {
+      printf("month is jan");
+  }
+  else if(b==2)
+  {
+      printf("month is feb");
+  }
+  else if(b==3)
+  {
+      printf("month is march");
+  }
+  else if(b==4)
+  {
+      printf("month is april");
+  }
+  else if(b==5)
+  {
+      printf("month is may");
+
+  }
+  else if(b==6)
+  {
+      printf("month is june");
+
+  }
+  else if(b==7)
+  {
+      printf("month is july");
+  }
+  else if(b==8)
+  {
+      printf("month is aug");
+  }
+  else if(b==9)
+  {
+      printf("month is sept");
+  }
+  else if(b==10)
+  {
+      printf("month is oct");
+
+  }
+  else if(b==11)
+  {
+      printf("month is nov");
+  }
+  else if(b==12)
+  {
+      printf("month is dec");
+  }
+}
+
+
+\\\\\\\\\\\\\\\\\\\\\\\
+
+question 4th
+
+
+#include <stdio.h>
+
+int main()
+{
+    printf("enter three numbers ");
+    int i,j,k;
+    scanf("%d ",&i);
+    scanf("%d ",&j);
+    scanf("%d ",&k);
+    gre(i,j,k);
+    
+
+   
+}
+void gre(int a, int b, int c)
+{
+    if(a>=b && a>=c)
+    {
+        printf("a is the largest number");
+        
+    }
+    else if(b>=a && b>=c)
+    {
+        printf("b is the largest number");
+        
+    }
+    
+     else if(c>=a && c>=b)
+    {
+        printf("c is the largest number");
+        
+    }
+}
+
+
+\\\\\\\\\\\\\\\\\\\\\
+question 5th
+
+
+int main()
+{
+int num1, num2, choice;
+
+printf("enter 0 forExit\n enter 1 to Add\n enter 2 to Subtract\n enter 3 to Multiply\n enter 4 to Divide");
+scanf("%d", &choice);
+
+switch(choice){
+    case 0:
+        return 0;
+        break;
+    case 1:
+        printf(" 1st number:\n");
+        scanf("%d", &num1);
+        printf(" 2nd number:\n");
+        scanf("%d", &num2);
+        printf("%d", add(num1,num2));
+        break;
+    case 2:
+        printf(" 1st number:\n");
+        scanf("%d", &num1);
+        printf(" 2nd number:\n");
+        scanf("%d", &num2);
+        printf("%d ", sub(num1,num2));
+        break;
+    case 3:
+        printf(" 1st number:\n");
+        scanf("%d", &num1);
+        printf("Enter 2nd number:\n");
+        scanf("%d", &num2);
+        printf("%d", mul(num1,num2));
+        break;
+    case 4:
+        printf(" 1st number:\n");
+        scanf("%d", &num1);
+        printf("Enter 2nd number:\n");
+        scanf("%d", &num2);
+        printf("%d", div(num1,num2));
+        break;
+    default:
+        printf("That is not a valid choice.");
+        break;
+}
+}
+    
+    
+int add(int x,int y)
+{
+    int z = x + y;
+    return z;
+}   
+
+int sub(int a,int b)
+{
+    int c = a - b;
+    return  c;
+}   
+
+int mul(int d,int e)
+{
+    int f = d * e;
+    return f;
+    }
+
+int div(int g,int h)
+{
+    int i = g / h;
+    return i;
+}
+
+\\\\\\\\\\\\\\\\\\\\\\\\\
+6th question
+
+
+#include <stdio.h>
+
+int main()
+{
+    int num;
+    printf("enter a number");
+    scanf("%d",&num);
+    fact(num);
+
+    
+    
+}
+
+void fact(int n)
+{
+    int facto,i;
+    facto=1;
+    for(i=1;i<=n;i++)
+    {
+        facto=facto*i;
+    }
+    printf("%d",facto);
+}
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\
+8th question
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+     int n,flag;
+    printf ("enter a number: ");
+    scanf ("%d",&n);
+    flag= prime (n);
+     if (flag==2)
+    {
+        printf("%d is prime number",n);
+    }
+    else
+    {
+        printf("%d is not prime number",n);
+    }
+
+}
+ int prime (int x)
+ {   int count=0,i;
+     for (i=1;i<=x;i++)
+    {
+        if (x%i==0)
+        {
+            count=count+1;
+        }
+    }
+    return count;
+ }
+
+
