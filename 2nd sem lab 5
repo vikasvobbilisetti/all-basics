@@ -392,3 +392,57 @@ int fact(int r)
 
 
 
+
+question-13
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int n,y;
+    printf("enter an number\n");
+    scanf("%d",&n);
+    y=sqr(n);
+    printf("square is %d\n",y);
+    neon(n);
+    
+
+    return 0;
+}
+  
+  
+  int sqr(int num)
+  {
+      int x;
+      x=num*num;
+      return x;
+      
+  }
+  
+  void neon(int numr)
+  {
+      int z,v,sum,i;
+      sum=0;
+      z=sqr(numr);
+      
+      for(i=0;i<z;i++)
+      {
+          v=z%10;
+          sum=sum+v;
+          z=z/10;
+      }
+      printf("\n%d\n",sum);
+      if(z==sum)
+      {
+          printf("it is neon");
+      }
+      else
+      {
+          printf("it is not neon");
+      }
+  }
+
+
+
