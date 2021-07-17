@@ -1,0 +1,117 @@
+ question ----1
+ #include <stdio.h>
+#include<string.h>
+
+ int main()
+
+ {
+
+   char x[20];
+   printf("enter your name");
+   gets(x);
+     printf(" your name is");
+   puts(x);
+   
+
+
+ }
+ 
+ \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+ 
+ qn---------------------------2
+ #include <stdio.h>
+#include<string.h>
+
+ void main()
+
+ {
+     char x[20];
+     printf("enter a word");
+     gets(x);
+     int i=0;
+     while(x[i] != '\0')
+     {
+         if(x[i]>='A' && x[i]<='Z')
+         printf("the upper cases are %c",x[i]);
+         i++;
+     }
+     
+
+   
+   
+
+
+ }
+ 
+ 
+ 
+ \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+ 
+ 
+ question-----------3
+ 
+ 
+ 
+ #include <stdio.h>
+#include<string.h>
+
+ void main()
+
+ {
+     char x[20];
+     printf("enter a word");
+     gets(x);
+     int i=0;
+     while(x[i] != '\0')
+     {
+         if(x[i]>='A' && x[i]<='z')
+         printf("the upper cases are %c",x[i]);
+         else
+         {
+             printf("the written character is digit %c",x[i]);
+         }
+         i++;
+     }
+     }
+     
+     
+     
+     
+     qoestion-------------------------4
+     
+     
+     
+     #include <stdio.h>
+#include<string.h>
+
+ void main()
+
+ {
+     char x[20];
+     printf("enter a word");
+     gets(x);
+     int i=0;
+     int count=0;
+     
+     while(x[i] != '\0')
+     {
+         count++;
+         i++;
+         
+     }
+     
+     printf("the length is %d",count);
+    
+     
+     
+}
+
+
+question--------------------------------------5
+
+
+
+
+     
+     
+     
