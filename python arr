@@ -1,0 +1,6 @@
+list1 = [-1,2,-5,9,10,23]
+arr = []
+for i in range(len(list1)):
+    if list1[i] > 0:
+        arr.append(list1[i])
+print(arr)  
